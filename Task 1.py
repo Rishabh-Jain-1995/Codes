@@ -1,6 +1,10 @@
-a= int(input('Enter the number: '))
+a= int(input('Enter a number: '))
 
-if a%2 ==0:
-    print(a, 'is an even number')
-else:
-    print(a, 'is an odd number')
+def factorial(n):
+    if n<2:
+        return 1
+    else:
+        return n*factorial(n-1)
+
+
+print('The factorial of', a, 'is:', factorial(a))
