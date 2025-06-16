@@ -1,10 +1,9 @@
-a= int(input('Enter a number: '))
+filename = 'sample.txt'
+try:
+    file1 = open(filename,'r')
+    reading = file1.read()
+    print(reading)
+    file1.close()
 
-def factorial(n):
-    if n<2:
-        return 1
-    else:
-        return n*factorial(n-1)
-
-
-print('The factorial of', a, 'is:', factorial(a))
+except FileNotFoundError:
+    print('The file',filename,'was nor found')
